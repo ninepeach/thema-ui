@@ -1,0 +1,18 @@
+{{/* components/content/card — dot: ui.Card. With URL the whole card is clickable. */}}
+{{ define "components/content/card" }}
+<article class="ui-card{{ if .URL }} ui-card--link{{ end }}">
+    {{ with .Image }}<div class="ui-card__media">{{ template "components/content/img" . }}</div>{{ end }}
+    <div class="ui-card__body">
+        {{ with .Badge }}{{ template "components/feedback/badge" . }}{{ end }}
+        {{ if .Eyebrow.Set }}<p class="ui-eyebrow">{{ template "text" .Eyebrow }}</p>{{ end }}
+        <h3 class="ui-card__title">{{ if .URL }}<a href="{{ .URL }}">{{ template "text" .Title }}</a>{{ else }}{{ template "text" .Title }}{{ end }}</h3>
+        {{ if .Body.Set }}<p class="ui-card__text">{{ template "text" .Body }}</p>{{ end }}
+        {{ if .URL }}<span class="ui-card__more" aria-hidden="true">{{ if .LinkLabel.Set }}{{ template "text" .LinkLabel }}{{ else }}{{ t "ui.learn_more" }}{{ end }}{{ template "icon" "arrow-right" }}</span>{{ end }}
+    </div>
+</article>
+{{ end }}
+
+{{/* components/content/card-grid — dot: ui.CardGrid */}}
+{{ define "components/content/card-grid" }}
+<div class="ui-card-grid{{ if eq .Columns 2 }} ui-card-grid--cols-2{{ end }}">{{ range .Cards }}{{ template "components/content/card" . }}{{ end }}</div>
+{{ end }}

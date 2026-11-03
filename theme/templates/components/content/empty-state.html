@@ -1,0 +1,9 @@
+{{/* components/content/empty-state — dot: ui.EmptyState */}}
+{{ define "components/content/empty-state" }}
+<div class="ui-empty" role="status">
+    {{ with .Icon }}<span class="ui-empty__icon">{{ template "icon" . }}</span>{{ end }}
+    <h2 class="ui-empty__title">{{ template "text" .Title }}</h2>
+    {{ if .Body.Set }}<p class="ui-empty__text">{{ template "text" .Body }}</p>{{ end }}
+    {{ with .Action }}{{ template "components/form/button" . }}{{ end }}
+</div>
+{{ end }}

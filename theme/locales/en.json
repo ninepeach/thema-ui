@@ -1,0 +1,18 @@
+{
+  "ui": {
+    "skip": "Skip to main content",
+    "menu": "Menu",
+    "close": "Close",
+    "home": "Home",
+    "breadcrumb": "Breadcrumb",
+    "lang_select": "Choose language",
+    "learn_more": "Learn more",
+    "copy": "Copy",
+    "copied": "Copied",
+    "loading": "Loading…",
+    "prev": "Previous",
+    "next": "Next",
+    "pagination": "Pagination",
+    "choose_file": "Choose a file or take a photo"
+  }
+}

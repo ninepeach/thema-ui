@@ -1,0 +1,2 @@
+{{/* components/navigation/link — dot: ui.Link */}}
+{{ define "components/navigation/link" }}<a href="{{ .URL }}"{{ if .Current }} aria-current="page"{{ end }}{{ if .External }} target="_blank" rel="noopener"{{ end }}>{{ with .Icon }}{{ template "icon" . }}{{ end }}<span>{{ template "text" .Label }}</span>{{ if .External }}{{ template "icon" "external" }}{{ end }}</a>{{ end }}

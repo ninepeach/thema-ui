@@ -1,0 +1,14 @@
+{{/* components/form/choice — dot: ui.Choice (checkbox or radio group). */}}
+{{ define "components/form/choice" }}
+<fieldset class="ui-choice{{ if .Error.Set }} is-invalid{{ end }}">
+    {{ if .Legend.Set }}<legend class="ui-field__label">{{ template "text" .Legend }}{{ if .Required }}<span class="ui-field__required" aria-hidden="true">*</span>{{ end }}</legend>{{ end }}
+    {{ if .Hint.Set }}<p class="ui-field__hint">{{ template "text" .Hint }}</p>{{ end }}
+    <div class="ui-choice__options">
+        {{ range .Options }}<label class="ui-choice__option">
+            <input type="{{ or $.Type "checkbox" }}" name="{{ $.Name }}" value="{{ .Value }}"{{ if .Selected }} checked{{ end }}{{ if .Disabled }} disabled{{ end }}{{ if and $.Required (or (eq $.Type "radio") (eq (len $.Options) 1)) }} required{{ end }}>
+            <span>{{ template "text" .Label }}</span>
+        </label>{{ end }}
+    </div>
+    {{ if .Error.Set }}<p class="ui-field__error">{{ template "icon" "alert" }}<span>{{ template "text" .Error }}</span></p>{{ end }}
+</fieldset>
+{{ end }}

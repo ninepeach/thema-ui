@@ -1,0 +1,9 @@
+{{/* components/content/accordion — dot: ui.Accordion. <details>, no JS. */}}
+{{ define "components/content/accordion" }}
+<div class="ui-accordion">
+    {{ range .Items }}<details class="ui-accordion__item"{{ if .Open }} open{{ end }}>
+        <summary class="ui-accordion__summary"><span>{{ template "text" .Title }}</span>{{ template "icon" "chevron-down" }}</summary>
+        <div class="ui-accordion__body"><p>{{ template "text" .Body }}</p></div>
+    </details>{{ end }}
+</div>
+{{ end }}

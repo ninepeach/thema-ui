@@ -1,0 +1,18 @@
+{
+  "ui": {
+    "skip": "본문으로 이동",
+    "menu": "메뉴",
+    "close": "닫기",
+    "home": "홈",
+    "breadcrumb": "경로 탐색",
+    "lang_select": "언어 선택",
+    "learn_more": "자세히 보기",
+    "copy": "복사",
+    "copied": "복사됨",
+    "loading": "불러오는 중…",
+    "prev": "이전",
+    "next": "다음",
+    "pagination": "페이지 이동",
+    "choose_file": "파일 선택 또는 사진 촬영"
+  }
+}

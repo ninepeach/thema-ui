@@ -1,0 +1,31 @@
+/* ink.css — example project CSS: black and white, square corners, no hero
+   image. Copy to themes/<project>/assets/css/<project>.css as a starting
+   point and add it to bundle.json. */
+
+:root {
+	--bg: #ffffff;
+	--bg-2: #f5f5f5;
+	--bg-subtle: #efefef;
+	--border: #d9d9d9;
+	--border-2: #a3a3a3;
+	--text: #111111;
+	--text-dim: #444444;
+	--text-mut: #6e6e6e;
+	--accent: #111111;
+	--accent-soft: #ececec;
+	--shadow: none;
+
+	--radius: 0;
+	--radius-lg: 0;
+	--radius-xl: 0;
+	--button-radius: 0;
+
+	--hero-image: none;
+	--hero-overlay: linear-gradient(transparent, transparent);
+	--hero-fallback: #111111;
+	--hero-min: 320px;
+}
+
+.ui-action-card,
+.ui-card,
+.ui-code { box-shadow: none; border: 1px solid var(--text); }

@@ -1,0 +1,12 @@
+{{/* components/navigation/switch-lang — root dot (.Lang, .Langs). <details>, works without JS. */}}
+{{ define "components/navigation/switch-lang" }}{{ if .Langs }}
+<details class="ui-lang" data-menu>
+    <summary class="ui-icon-button ui-lang__toggle" aria-label="{{ t "ui.lang_select" }}">
+        <span class="ui-lang__icon">{{ template "icon" "globe" }}</span>
+        <span class="ui-lang__current">{{ .Lang.Name }}</span>
+    </summary>
+    <nav class="ui-lang__menu" aria-label="{{ t "ui.lang_select" }}">
+        {{ range .Langs }}<a href="{{ .URL }}" lang="{{ .Code }}" hreflang="{{ .Code }}"{{ if .Current }} aria-current="true"{{ end }}>{{ .Name }}</a>{{ end }}
+    </nav>
+</details>
+{{ end }}{{ end }}

@@ -1,0 +1,8 @@
+{{/* components/navigation/pagination — dot: ui.Pagination */}}
+{{ define "components/navigation/pagination" }}
+<nav class="ui-pagination" aria-label="{{ t "ui.pagination" }}">
+    {{ with .Prev }}<a class="ui-pagination__step" href="{{ .URL }}" rel="prev">{{ template "icon" "chevron-left" }}<span>{{ t "ui.prev" }}</span></a>{{ end }}
+    <ul class="ui-pagination__pages">{{ range .Pages }}<li>{{ if .Current }}<span aria-current="page">{{ template "text" .Label }}</span>{{ else }}<a href="{{ .URL }}">{{ template "text" .Label }}</a>{{ end }}</li>{{ end }}</ul>
+    {{ with .Next }}<a class="ui-pagination__step" href="{{ .URL }}" rel="next"><span>{{ t "ui.next" }}</span>{{ template "icon" "chevron-right" }}</a>{{ end }}
+</nav>
+{{ end }}

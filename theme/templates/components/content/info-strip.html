@@ -1,0 +1,12 @@
+{{/* components/content/info-strip — dot: ui.InfoStrip */}}
+{{ define "components/content/info-strip" }}
+<section class="ui-info-strip">
+    <div class="ui-info-strip__head">
+        <span class="ui-info-strip__icon">{{ template "icon" .Icon }}</span>
+        <h2 class="ui-info-strip__title">{{ template "text" .Title }}</h2>
+    </div>
+    <dl class="ui-info-strip__items">
+        {{ range .Items }}<div class="ui-info-strip__item"><dt>{{ template "text" .Label }}</dt><dd>{{ template "text" .Value }}</dd></div>{{ end }}
+    </dl>
+</section>
+{{ end }}

@@ -1,0 +1,88 @@
+{{/* Component kit: every component and state on one page. */}}
+{{ define "pages/components" }}
+{{ template "layouts/document-open" . }}
+<main class="ui-main" id="main-content">{{ with .Kit }}
+{{ template "components/layout/page-header" .Header }}
+<div class="ui-wrap pv-kit">
+
+<section class="pv-group" id="buttons">
+    <h2>form/button</h2>
+    <div class="pv-row">{{ range .Buttons }}{{ template "components/form/button" . }}{{ end }}</div>
+    <p class="pv-label">loading (form[data-lock] while submitting) · block</p>
+    <div class="pv-row"><button class="ui-button ui-button--primary is-loading" type="button">{{ template "components/form/button-inner" .Loading }}</button></div>
+    {{ template "components/form/button" .BlockButton }}
+</section>
+
+<section class="pv-group" id="form">
+    <h2>form/field · form/choice · form/file</h2>
+    <form class="pv-cols" action="#" data-lock>
+        <div class="ui-stack">{{ range .Fields }}{{ template "components/form/field" . }}{{ end }}</div>
+        <div class="ui-stack">
+            {{ range .Choices }}{{ template "components/form/choice" . }}{{ end }}
+            {{ range .Files }}{{ template "components/form/file" . }}{{ end }}
+            {{ template "components/form/button" .Submit }}
+        </div>
+    </form>
+</section>
+
+<section class="pv-group" id="feedback">
+    <h2>feedback/notice · feedback/badge · feedback/spinner</h2>
+    {{ range .Notices }}{{ template "components/feedback/notice" . }}{{ end }}
+    <div class="pv-row">{{ range .Badges }}{{ template "components/feedback/badge" . }}{{ end }}{{ template "components/feedback/spinner" }}</div>
+</section>
+
+<section class="pv-group" id="navigation">
+    <h2>navigation/steps · tabs · pagination · back-link</h2>
+    {{ range .Steps }}{{ template "components/navigation/steps" . }}{{ end }}
+    {{ template "components/navigation/tabs" .Tabs }}
+    {{ template "components/navigation/pagination" .Pagination }}
+    {{ template "components/navigation/back-link" .Back }}
+</section>
+
+<section class="pv-group" id="content">
+    <h2>content/code-display · empty-state · card</h2>
+    <div class="pv-cols">
+        {{ template "components/content/code-display" .Code }}
+        {{ template "components/content/code-display" .CodeLong }}
+    </div>
+    {{ template "components/content/empty-state" .Empty }}
+    {{ template "components/content/card-grid" .Cards }}
+</section>
+
+<section class="pv-group" id="list">
+    <h2>content/list-card · info-strip · action-grid (edge cases)</h2>
+    <div class="pv-cols">
+        {{ template "components/content/list-card" .Minimal }}
+        {{ template "components/content/info-strip" .LongStrip }}
+    </div>
+    {{ template "components/content/action-grid" .LongActions }}
+</section>
+
+<section class="pv-group" id="dialog">
+    <h2>overlay/dialog</h2>
+    <div class="pv-row">{{ template "components/form/button" .DialogOpen }}</div>
+    {{ template "components/overlay/dialog" .Dialog }}
+</section>
+
+<section class="pv-group" id="icons">
+    <h2>icon</h2>
+    <div class="pv-icons">{{ range .Icons }}<div class="pv-icon">{{ template "icon" . }}<span>{{ . }}</span></div>{{ end }}</div>
+</section>
+
+<section class="pv-group" id="type">
+    <h2>typography (default.css + common.css §2)</h2>
+    <h1>Heading 1 見出し 标题</h1>
+    <h2>Heading 2 見出し 标题</h2>
+    <h3>Heading 3 見出し 标题</h3>
+    <h4>Heading 4 見出し 标题</h4>
+    <p>Body — 本文テキストの表示確認。正文文字，测试中文标点、换行与混排 English words.</p>
+    <p class="ui-eyebrow">eyebrow</p>
+    <p><code>code</code> <kbd>kbd</kbd> <small>small</small> <strong>strong</strong> <a href="#type">link</a></p>
+    <hr>
+</section>
+
+</div>
+{{ end }}</main>
+{{ template "pages/toolbar" . }}
+{{ template "layouts/document-close" . }}
+{{ end }}

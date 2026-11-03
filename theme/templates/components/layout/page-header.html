@@ -1,0 +1,10 @@
+{{/* components/layout/page-header — dot: ui.PageHeader */}}
+{{ define "components/layout/page-header" }}
+<header class="ui-page-header">
+    <div class="ui-wrap">
+        {{ if .Eyebrow.Set }}<p class="ui-eyebrow">{{ template "text" .Eyebrow }}</p>{{ end }}
+        <h1 class="ui-page-header__title">{{ template "text" .Title }}</h1>
+        {{ if .Lead.Set }}<p class="ui-page-header__lead">{{ template "text" .Lead }}</p>{{ end }}
+    </div>
+</header>
+{{ end }}

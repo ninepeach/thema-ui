@@ -1,0 +1,18 @@
+{{ define "pages/frames" }}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>thema-ui · widths</title>
+    <link rel="stylesheet" href="{{ asset "src/css/default.css" }}">
+    <link rel="stylesheet" href="{{ asset "css/chrome.css" }}">
+</head>
+<body>
+{{ template "pages/toolbar" . }}
+<div class="pv-frames">
+    {{ range .Frames }}<div class="pv-frame"><span>{{ .Width }}px</span><iframe src="{{ .URL }}" width="{{ .Width }}" title="{{ .Width }}px"></iframe></div>{{ end }}
+</div>
+</body>
+</html>
+{{ end }}

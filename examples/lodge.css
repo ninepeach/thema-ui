@@ -1,0 +1,24 @@
+/* lodge.css — example project CSS: deep navy, rounded corners, photo hero.
+   Copy to themes/<project>/assets/css/<project>.css as a starting point and
+   add it to bundle.json. Image URLs in variables must be root-absolute:
+   change /assets/preview/ to /assets/<project>/. */
+
+:root {
+	--bg: #ffffff;
+	--bg-2: #f1f5fb;
+	--bg-subtle: #eef2f8;
+	--border: #e2e8f0;
+	--border-2: #cbd5e1;
+	--text: #14223a;
+	--text-dim: #4b5a72;
+	--text-mut: #6b7890;
+	--accent: #1f3352;
+	--accent-soft: #e3e7fb;
+	--scroll-progress-color: #d9a441;   /* warm gold: navy is too dark for a thin line */
+
+	--radius: 12px;
+	--radius-lg: 18px;
+	--radius-xl: 26px;
+
+	--hero-image: url("/assets/preview/images/hero.svg");
+}

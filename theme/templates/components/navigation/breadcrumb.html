@@ -1,0 +1,9 @@
+{{/* components/navigation/breadcrumb — root dot (.HomeURL, .Breadcrumb []ui.Link; last item without URL = current). */}}
+{{ define "components/navigation/breadcrumb" }}{{ if .Breadcrumb }}
+<nav class="ui-breadcrumb" aria-label="{{ t "ui.breadcrumb" }}">
+    <ol class="ui-wrap ui-breadcrumb__list">
+        <li><a href="{{ .HomeURL }}" aria-label="{{ t "ui.home" }}">{{ template "icon" "home" }}</a></li>
+        {{ range .Breadcrumb }}<li>{{ if .URL }}<a href="{{ .URL }}">{{ template "text" .Label }}</a>{{ else }}<span aria-current="page">{{ template "text" .Label }}</span>{{ end }}</li>{{ end }}
+    </ol>
+</nav>
+{{ end }}{{ end }}

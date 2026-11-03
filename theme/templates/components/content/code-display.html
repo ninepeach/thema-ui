@@ -1,0 +1,11 @@
+{{/* components/content/code-display — dot: ui.CodeDisplay. Copy needs thema-ui.js. */}}
+{{ define "components/content/code-display" }}
+<div class="ui-code">
+    {{ if .Label.Set }}<p class="ui-code__label" id="{{ .ID }}-label">{{ template "text" .Label }}</p>{{ end }}
+    <div class="ui-code__row">
+        <output class="ui-code__value" id="{{ .ID }}"{{ if .Label.Set }} aria-labelledby="{{ .ID }}-label"{{ end }}>{{ .Code }}</output>
+        {{ if .Copy }}<button class="ui-icon-button ui-code__copy" type="button" data-copy="{{ .ID }}" data-copied-label="{{ t "ui.copied" }}">{{ template "icon" "copy" }}<span>{{ t "ui.copy" }}</span></button>{{ end }}
+    </div>
+    {{ if .Note.Set }}<p class="ui-code__note">{{ template "text" .Note }}</p>{{ end }}
+</div>
+{{ end }}

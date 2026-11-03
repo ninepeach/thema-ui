@@ -1,0 +1,16 @@
+{{/* components/content/action-card — dot: ui.ActionCard */}}
+{{ define "components/content/action-card" }}
+<a class="ui-action-card{{ if .Primary }} ui-action-card--primary{{ end }}" href="{{ .URL }}">
+    <span class="ui-action-card__icon">{{ template "icon" .Icon }}</span>
+    <span class="ui-action-card__copy">
+        <span class="ui-action-card__title">{{ template "text" .Title }}</span>
+        {{ if .Desc.Set }}<span class="ui-action-card__desc">{{ template "text" .Desc }}</span>{{ end }}
+    </span>
+    <span class="ui-action-card__arrow">{{ template "icon" "chevron-right" }}</span>
+</a>
+{{ end }}
+
+{{/* components/content/action-grid — dot: []ui.ActionCard */}}
+{{ define "components/content/action-grid" }}
+<nav class="ui-action-grid">{{ range . }}{{ template "components/content/action-card" . }}{{ end }}</nav>
+{{ end }}

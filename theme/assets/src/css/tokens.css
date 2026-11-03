@@ -1,0 +1,35 @@
+/* tokens.css — the thema-ui look: only the variables that differ from the
+   neutral defaults at the top of common.css (that list names every variable).
+   Warm paper background, white panels, ink text and one indigo accent — in
+   the spirit of current WordPress block themes. A project changes its look by
+   overriding variables in its own CSS. */
+
+:root {
+	/* shape */
+	--radius: 8px;
+	--radius-lg: 14px;
+	--radius-xl: 20px;
+	--button-radius: 999px;
+	--header-h: 72px;
+
+	/* colour */
+	--bg: #fbfaf7;
+	--bg-2: #f3f1ec;
+	--bg-subtle: #eeebe5;
+	--border: #e6e2da;
+	--border-2: #d2ccc1;
+	--text: #1c1b22;
+	--text-dim: #4a4853;
+	--text-mut: #77747e;
+	--accent: #3b4fd8;
+	--accent-soft: color-mix(in srgb, var(--accent) 9%, var(--panel));
+	--success: #18794e;
+	--warning: #9a5b00;
+	--danger: #c4314b;
+	--shadow: 0 1px 2px rgb(28 27 34 / .04), 0 16px 40px -16px rgb(28 27 34 / .22);
+
+	/* hero */
+	--hero-overlay: linear-gradient(180deg, rgb(20 18 30 / .55), rgb(20 18 30 / .15) 50%, rgb(20 18 30 / .55));
+	--hero-fallback: linear-gradient(135deg, #1b1a3a 0%, #34409f 50%, #8c9bea 100%);
+	--hero-min: 520px;
+}

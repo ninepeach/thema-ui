@@ -1,0 +1,13 @@
+{
+  "name": "thema-ui",
+  "css": [
+    "src/css/default.css",
+    "src/css/common.css",
+    "src/css/pages.css",
+    "src/css/tokens.css",
+    "src/css/style.css"
+  ],
+  "js": [
+    "src/js/thema-ui.js"
+  ]
+}

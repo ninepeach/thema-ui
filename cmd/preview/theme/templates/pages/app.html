@@ -1,0 +1,13 @@
+{{/* App demo (phone-first): brand hero + sheet, like a check-in home page. */}}
+{{ define "pages/app" }}
+{{ template "layouts/document-open" . }}
+<main class="ui-sheet" id="main-content">{{ with .App }}
+    {{ template "components/content/action-grid" .Actions }}
+    {{ template "components/content/info-strip" .WiFi }}
+    {{ template "components/content/list-card" .Rules }}
+    {{ template "components/content/list-card" .Quiet }}
+    {{ template "components/feedback/notice" .Notice }}
+{{ end }}</main>
+{{ template "pages/toolbar" . }}
+{{ template "layouts/document-close" . }}
+{{ end }}

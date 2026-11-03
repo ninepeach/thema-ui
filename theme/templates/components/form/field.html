@@ -1,0 +1,20 @@
+{{/* components/form/field — dot: ui.Field. Label, control, hint/error wired with aria. */}}
+{{ define "components/form/field" }}
+<div class="ui-field{{ if .Error.Set }} is-invalid{{ end }}">
+    <label class="ui-field__label" for="{{ .ID }}">{{ template "text" .Label }}{{ if .Required }}<span class="ui-field__required" aria-hidden="true">*</span>{{ end }}</label>
+    {{ if eq .Type "select" }}
+    <select class="ui-input" id="{{ .ID }}" name="{{ .Name }}"{{ template "components/form/aria" . }}>
+        {{ range .Options }}<option value="{{ .Value }}"{{ if .Selected }} selected{{ end }}{{ if .Disabled }} disabled{{ end }}>{{ template "text" .Label }}</option>{{ end }}
+    </select>
+    {{ else if eq .Type "textarea" }}
+    <textarea class="ui-input" id="{{ .ID }}" name="{{ .Name }}" rows="4"{{ with .Placeholder }} placeholder="{{ . }}"{{ end }}{{ template "components/form/aria" . }}>{{ .Value }}</textarea>
+    {{ else }}
+    <input class="ui-input" id="{{ .ID }}" name="{{ .Name }}" type="{{ or .Type "text" }}" value="{{ .Value }}"{{ with .Placeholder }} placeholder="{{ . }}"{{ end }}{{ with .Autocomplete }} autocomplete="{{ . }}"{{ end }}{{ with .Inputmode }} inputmode="{{ . }}"{{ end }}{{ template "components/form/aria" . }}>
+    {{ end }}
+    {{ template "components/form/note" . }}
+</div>
+{{ end }}
+
+{{/* shared by field and file: required / disabled / invalid / describedby */}}
+{{ define "components/form/aria" }}{{ if .Required }} required{{ end }}{{ if .Disabled }} disabled{{ end }}{{ if .Error.Set }} aria-invalid="true"{{ end }}{{ if or .Hint.Set .Error.Set }} aria-describedby="{{ .ID }}-note"{{ end }}{{ end }}
+{{ define "components/form/note" }}{{ if .Error.Set }}<p class="ui-field__error" id="{{ .ID }}-note">{{ template "icon" "alert" }}<span>{{ template "text" .Error }}</span></p>{{ else if .Hint.Set }}<p class="ui-field__hint" id="{{ .ID }}-note">{{ template "text" .Hint }}</p>{{ end }}{{ end }}

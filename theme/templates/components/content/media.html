@@ -1,0 +1,7 @@
+{{/* components/content/media — dot: ui.Media. Ratio: "" (4x3) | 16x9 | 3x2 | 1x1 */}}
+{{ define "components/content/media" }}
+<figure class="ui-media{{ with .Ratio }} ui-media--{{ . }}{{ end }}">
+    {{ template "components/content/img" .Image }}
+    {{ if .Caption.Set }}<figcaption>{{ template "text" .Caption }}</figcaption>{{ end }}
+</figure>
+{{ end }}

@@ -1,0 +1,18 @@
+{{/* components/content/list-card — dot: ui.ListCard. Row.Text set → text row; else label/sub/value. */}}
+{{ define "components/content/list-card" }}
+<section class="ui-list-card"{{ with .ID }} id="{{ . }}"{{ end }}>
+    <header class="ui-list-card__head">
+        {{ with .Icon }}<span class="ui-list-card__icon">{{ template "icon" . }}</span>{{ end }}
+        <h2 class="ui-list-card__title">{{ template "text" .Title }}{{ if .Sub.Set }} <span class="ui-list-card__sub">· {{ template "text" .Sub }}</span>{{ end }}</h2>
+        {{ if .Badge.Set }}<span class="ui-list-card__badge">{{ template "text" .Badge }}</span>{{ end }}
+    </header>
+    <ul class="ui-list-card__rows">
+        {{ range .Rows }}<li class="ui-row{{ if .Text.Set }} ui-row--text{{ end }}{{ if not .Icon }} ui-row--no-icon{{ end }}">
+            {{ with .Icon }}<span class="ui-row__icon">{{ template "icon" . }}</span>{{ end }}
+            {{ if .Text.Set }}<span class="ui-row__text">{{ template "text" .Text }}</span>
+            {{ else }}<span class="ui-row__label">{{ template "text" .Label }}{{ if .Sub.Set }}<span class="ui-row__sub">{{ template "text" .Sub }}</span>{{ end }}</span>
+            <span class="ui-row__value">{{ template "text" .Value }}</span>{{ end }}
+        </li>{{ end }}
+    </ul>
+</section>
+{{ end }}

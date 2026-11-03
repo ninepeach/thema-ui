@@ -1,0 +1,17 @@
+{{/* components/layout/section-open / section-close — dot: ui.Section.
+     {{ template "components/layout/section-open" .S }} …content… {{ template "components/layout/section-close" }} */}}
+{{ define "components/layout/section-open" }}
+<section class="ui-section{{ if .Tint }} ui-section--tint{{ end }}"{{ with .ID }} id="{{ . }}"{{ end }}>
+    <div class="ui-wrap{{ if eq .Width "narrow" }} ui-wrap--narrow{{ end }}">
+        {{ if or .Eyebrow.Set .Title.Set .Lead.Set }}<header class="ui-section__header">
+            {{ if .Eyebrow.Set }}<p class="ui-eyebrow">{{ template "text" .Eyebrow }}</p>{{ end }}
+            {{ if .Title.Set }}<h2 class="ui-section__title">{{ template "text" .Title }}</h2>{{ end }}
+            {{ if .Lead.Set }}<p class="ui-section__lead">{{ template "text" .Lead }}</p>{{ end }}
+        </header>{{ end }}
+        <div class="ui-section__body">
+{{ end }}
+{{ define "components/layout/section-close" }}
+        </div>
+    </div>
+</section>
+{{ end }}

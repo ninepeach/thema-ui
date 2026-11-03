@@ -1,0 +1,21 @@
+{{/* components/layout/hero — root dot; data in .Hero (ui.Hero).
+     Background image: --hero-image in the project CSS (CSP forbids inline styles). */}}
+{{ define "components/layout/hero" }}{{ with .Hero }}
+<header class="ui-hero{{ if .Compact }} ui-hero--compact{{ end }}{{ if .Center }} ui-hero--center{{ end }}">
+    <div class="ui-hero__inner">
+        {{ if .ShowBrand }}<div class="ui-hero__bar">
+            <div class="ui-hero__brand">
+                {{ template "components/global/logo" $ }}
+                {{ if .Tagline.Set }}<p class="ui-hero__tagline">{{ template "text" .Tagline }}</p>{{ end }}
+            </div>
+            {{ template "components/navigation/switch-lang" $ }}
+        </div>{{ end }}
+        {{ if or .Eyebrow.Set .Title.Set .Lead.Set .Actions }}<div class="ui-hero__body">
+            {{ if .Eyebrow.Set }}<p class="ui-eyebrow">{{ template "text" .Eyebrow }}</p>{{ end }}
+            {{ if .Title.Set }}<h1 class="ui-hero__title">{{ template "text" .Title }}</h1>{{ end }}
+            {{ if .Lead.Set }}<p class="ui-hero__lead">{{ template "text" .Lead }}</p>{{ end }}
+            {{ if .Actions }}<div class="ui-hero__actions">{{ range .Actions }}{{ template "components/form/button" . }}{{ end }}</div>{{ end }}
+        </div>{{ end }}
+    </div>
+</header>
+{{ end }}{{ end }}

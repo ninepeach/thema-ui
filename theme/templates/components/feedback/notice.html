@@ -1,0 +1,11 @@
+{{/* components/feedback/notice — dot: ui.Notice. Tone: info | success | warning | danger */}}
+{{ define "components/feedback/notice" }}
+<div class="ui-notice ui-notice--{{ or .Tone "info" }}" role="{{ if eq .Tone "danger" "warning" }}alert{{ else }}status{{ end }}">
+    <span class="ui-notice__icon">{{ if eq .Tone "success" }}{{ template "icon" "check" }}{{ else if eq .Tone "warning" "danger" }}{{ template "icon" "alert" }}{{ else }}{{ template "icon" "info" }}{{ end }}</span>
+    <div class="ui-notice__copy">
+        {{ if .Title.Set }}<p class="ui-notice__title">{{ template "text" .Title }}</p>{{ end }}
+        {{ if .Body.Set }}<p class="ui-notice__text">{{ template "text" .Body }}</p>{{ end }}
+        {{ with .Action }}<div class="ui-notice__action">{{ template "components/form/button" . }}</div>{{ end }}
+    </div>
+</div>
+{{ end }}

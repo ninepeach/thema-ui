@@ -1,0 +1,39 @@
+{{/* Preview home: pick an example style, a page and a language. */}}
+{{ define "pages/home" }}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>thema-ui preview</title>
+    {{ range .CSS }}<link rel="stylesheet" href="{{ asset . }}">
+    {{ end }}
+</head>
+<body>
+<main class="ui-main" id="main-content">{{ with .Home }}
+    <form class="pv-home" action="/open" method="get">
+        <h1>thema-ui preview</h1>
+        <div class="ui-field">
+            <label class="ui-field__label" for="pv-example">example</label>
+            <select class="ui-input" id="pv-example" name="example">
+                {{ range .Examples }}<option value="{{ .Value }}"{{ if .Selected }} selected{{ end }}>{{ .Label }}</option>{{ end }}
+            </select>
+        </div>
+        <div class="ui-field">
+            <label class="ui-field__label" for="pv-page">page</label>
+            <select class="ui-input" id="pv-page" name="page">
+                {{ range .Pages }}<option value="{{ .Value }}">{{ .Label }}</option>{{ end }}
+            </select>
+        </div>
+        <div class="ui-field">
+            <label class="ui-field__label" for="pv-lang">language</label>
+            <select class="ui-input" id="pv-lang" name="lang">
+                {{ range .Langs }}<option value="{{ .Value }}">{{ .Label }}</option>{{ end }}
+            </select>
+        </div>
+        <button class="ui-button ui-button--primary" type="submit">open</button>
+    </form>
+{{ end }}</main>
+</body>
+</html>
+{{ end }}

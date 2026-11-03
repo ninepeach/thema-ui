@@ -1,0 +1,5 @@
+{{/* components/global/scroll-progress — thin bar at the top of the window
+     showing how far the page is scrolled. Rendered by layouts/document-open
+     when ui.Document.ScrollProgress is set; thema-ui.js moves it (without JS
+     it stays hidden). */}}
+{{ define "components/global/scroll-progress" }}<div class="ui-scroll-progress" data-scroll-progress aria-hidden="true"></div>{{ end }}

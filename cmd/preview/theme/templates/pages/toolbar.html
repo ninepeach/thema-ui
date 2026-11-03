@@ -1,0 +1,10 @@
+{{ define "pages/toolbar" }}{{ with .Toolbar }}
+<nav class="pv-toolbar" aria-label="preview">
+    <b><a href="/">thema-ui</a></b>
+    <span>example: {{ range .Examples }}<a href="{{ .URL }}"{{ if .Current }} aria-current="true"{{ end }}>{{ .Label }}</a>{{ end }}</span>
+    <span>page: {{ range .Pages }}<a href="{{ .URL }}"{{ if .Current }} aria-current="true"{{ end }}>{{ .Label }}</a>{{ end }}</span>
+    <span>assets: {{ range .Assets }}<a href="{{ .URL }}"{{ if .Current }} aria-current="true"{{ end }}>{{ .Label }}</a>{{ end }}</span>
+    <span>layers: {{ range .Layers }}<a href="{{ .URL }}"{{ if .Current }} aria-current="true"{{ end }}>{{ .Label }}</a>{{ end }}</span>
+    <span><a href="{{ .FramesURL }}">widths ↗</a></span>
+</nav>
+{{ end }}{{ end }}

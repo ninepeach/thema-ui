@@ -1,0 +1,2 @@
+{{/* text — dot: ui.Text. Key → translated (Value fills {{value}}); else Value. */}}
+{{ define "text" }}{{ if .Key }}{{ t .Key "value" .Value }}{{ else }}{{ .Value }}{{ end }}{{ end }}

@@ -1,0 +1,33 @@
+/* pages.css — shared page shells */
+
+/* Website page: main content area */
+.ui-main {
+	display: block;
+	min-height: 40vh;
+}
+
+/* App page (phone-first): body.ui-app narrows the hero to the app
+   column; .ui-sheet is the white panel that overlaps the hero. */
+.ui-app {
+	--hero-max: var(--app-max);
+	--hero-min: 230px;
+	--hero-min-compact: 140px;
+}
+
+.ui-sheet {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	max-width: var(--app-max);
+	margin: -28px auto 0;
+	padding: 18px var(--gutter) 40px;
+	background: var(--bg);
+	border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.ui-sheet__title {
+	font-size: 1.5rem;
+}
+
+.ui-app .ui-hero__inner { padding-bottom: 40px; }

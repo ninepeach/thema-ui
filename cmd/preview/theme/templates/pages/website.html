@@ -1,0 +1,30 @@
+{{/* Website demo: header + hero + sections + footer, composed only from components. */}}
+{{ define "pages/website" }}
+{{ template "layouts/document-open" . }}
+<main class="ui-main" id="main-content">{{ with .Website }}
+    {{ template "components/layout/section-open" .Intro }}
+        {{ template "components/content/features" .Features }}
+    {{ template "components/layout/section-close" }}
+
+    {{ template "components/layout/section-open" .Rooms }}
+        {{ template "components/content/card-grid" .Cards }}
+    {{ template "components/layout/section-close" }}
+
+    {{ template "components/layout/section-open" .About }}
+        <div class="pv-cols">
+            {{ template "components/content/media" .Media }}
+            {{ template "components/content/list-card" .Hours }}
+        </div>
+    {{ template "components/layout/section-close" }}
+
+    {{ template "components/layout/section-open" .FAQ }}
+        {{ template "components/content/accordion" .Accordion }}
+    {{ template "components/layout/section-close" }}
+
+    {{ template "components/layout/section-open" .Closing }}
+        {{ template "components/content/cta" .CTA }}
+    {{ template "components/layout/section-close" }}
+{{ end }}</main>
+{{ template "pages/toolbar" . }}
+{{ template "layouts/document-close" . }}
+{{ end }}

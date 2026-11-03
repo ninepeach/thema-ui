@@ -1,0 +1,14 @@
+{{/* components/overlay/dialog — dot: ui.Dialog. Native <dialog>; opened by a
+     Button{Dialog: id} through thema-ui.js. Close buttons submit method=dialog. */}}
+{{ define "components/overlay/dialog" }}
+<dialog class="ui-dialog" id="{{ .ID }}" aria-labelledby="{{ .ID }}-title">
+    <form class="ui-dialog__panel" method="dialog">
+        <header class="ui-dialog__head">
+            <h2 class="ui-dialog__title" id="{{ .ID }}-title">{{ template "text" .Title }}</h2>
+            <button class="ui-icon-button ui-dialog__close" type="submit" value="cancel" formnovalidate aria-label="{{ t "ui.close" }}">{{ template "icon" "x" }}</button>
+        </header>
+        {{ if .Body.Set }}<div class="ui-dialog__body"><p>{{ template "text" .Body }}</p></div>{{ end }}
+        {{ if .Actions }}<footer class="ui-dialog__actions">{{ range .Actions }}{{ template "components/form/button" . }}{{ end }}</footer>{{ end }}
+    </form>
+</dialog>
+{{ end }}

@@ -1,0 +1,30 @@
+/* forest.css — example project CSS: forest green, small corners, serif
+   headings. Copy to themes/<project>/assets/css/<project>.css as a starting
+   point and add it to bundle.json. Image URLs in variables must be
+   root-absolute: change /assets/preview/ to /assets/<project>/. */
+
+:root {
+	--serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Noto Serif JP", "Noto Serif SC", Georgia, serif;
+
+	--bg: #fbfbf8;
+	--bg-2: #f4f5f1;
+	--bg-subtle: #eef0ea;
+	--border: #e3e3df;
+	--border-2: #ccccca;
+	--text: #1d1d1b;
+	--text-dim: #5f5f5b;
+	--text-mut: #7c7c77;
+	--accent: #4d624b;
+	--accent-soft: #e7ece4;
+	--scroll-progress-color: #86ad5f;   /* bright moss: the deep green is too dark for a thin line */
+
+	--radius: 6px;
+	--radius-lg: 8px;
+	--radius-xl: 12px;
+	--button-radius: var(--radius);
+
+	--hero-image: url("/assets/preview/images/peak.svg");
+	--hero-fallback: linear-gradient(160deg, #2f3f2e 0%, #5e7a5b 60%, #c9d3c4 100%);
+}
+
+h1, h2, h3, .ui-hero__title { font-family: var(--serif); letter-spacing: 0; }

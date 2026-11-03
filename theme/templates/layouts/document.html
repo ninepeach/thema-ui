@@ -1,0 +1,22 @@
+{{/* layouts/document-open / document-close — root dot: ui.Document (embedded).
+     Renders skip link, scroll progress, site header and hero when set; pages add <main id="main-content">. */}}
+{{ define "layouts/document-open" }}
+<!doctype html>
+<html lang="{{ .Locale }}"{{ with .Theme }} data-theme="{{ . }}"{{ end }}>
+{{ template "layouts/head" . }}
+<body{{ with .BodyClass }} class="{{ . }}"{{ end }}>
+{{ template "components/global/skip-link" . }}
+{{ if .ScrollProgress }}{{ template "components/global/scroll-progress" . }}{{ end }}
+{{ template "components/layout/site-header" . }}
+{{ template "components/layout/hero" . }}
+{{ end }}
+
+{{ define "layouts/document-close" }}
+{{ template "components/navigation/breadcrumb" . }}
+{{ template "components/layout/site-footer" . }}
+{{ range .JS }}<script src="{{ asset . }}" defer></script>
+{{ else }}<script src="{{ asset "dist/thema-ui.min.js" }}" defer></script>
+{{ end }}
+</body>
+</html>
+{{ end }}

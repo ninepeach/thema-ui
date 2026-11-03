@@ -1,0 +1,21 @@
+{{/* components/layout/site-footer — root dot; data in .Footer (ui.Footer). */}}
+{{ define "components/layout/site-footer" }}{{ with .Footer }}
+<footer class="ui-footer">
+    <div class="ui-wrap ui-footer__main">
+        <div class="ui-footer__brand">
+            {{ template "components/global/logo" $ }}
+            {{ if .About.Set }}<p>{{ template "text" .About }}</p>{{ end }}
+        </div>
+        {{ if .Columns }}<div class="ui-footer__columns">
+            {{ range .Columns }}<div class="ui-footer__col">
+                <h2 class="ui-footer__title">{{ template "text" .Title }}</h2>
+                <ul>{{ range .Links }}<li>{{ template "components/navigation/link" . }}</li>{{ end }}</ul>
+            </div>{{ end }}
+        </div>{{ end }}
+    </div>
+    {{ if or .Bottom.Set .Links }}<div class="ui-wrap ui-footer__bottom">
+        {{ if .Bottom.Set }}<p>{{ template "text" .Bottom }}</p>{{ end }}
+        {{ if .Links }}<ul>{{ range .Links }}<li>{{ template "components/navigation/link" . }}</li>{{ end }}</ul>{{ end }}
+    </div>{{ end }}
+</footer>
+{{ end }}{{ end }}

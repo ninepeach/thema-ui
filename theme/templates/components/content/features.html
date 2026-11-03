@@ -1,0 +1,10 @@
+{{/* components/content/features — dot: ui.Features */}}
+{{ define "components/content/features" }}
+<ul class="ui-features">
+    {{ range .Items }}<li class="ui-feature">
+        {{ with .Icon }}<span class="ui-feature__icon">{{ template "icon" . }}</span>{{ end }}
+        <h3 class="ui-feature__title">{{ template "text" .Title }}</h3>
+        {{ if .Body.Set }}<p class="ui-feature__text">{{ template "text" .Body }}</p>{{ end }}
+    </li>{{ end }}
+</ul>
+{{ end }}

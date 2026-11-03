@@ -1,0 +1,42 @@
+/* chrome.css — preview tool UI only (toolbar, frames). Not part of thema-ui. */
+body { padding-bottom: 40px; }
+
+.pv-toolbar {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2000;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px 14px;
+	padding: 6px 10px;
+	background: #0f172a;
+	color: #cbd5e1;
+	font: 12px/1.5 ui-monospace, Menlo, monospace;
+}
+
+.pv-toolbar b { color: #fff; }
+.pv-toolbar span { display: inline-flex; flex-wrap: wrap; gap: 2px; align-items: center; }
+.pv-toolbar a { padding: 1px 6px; border-radius: 4px; color: #94a3b8; }
+.pv-toolbar a:hover { color: #fff; }
+.pv-toolbar a[aria-current="true"] { background: #334155; color: #fff; }
+.pv-toolbar .ui-header { position: static; }
+
+.pv-kit { display: grid; gap: 40px; padding-block: 32px 64px; }
+.pv-group { display: grid; gap: 16px; }
+.pv-group > h2:first-child { font: 700 13px/1.4 ui-monospace, Menlo, monospace; letter-spacing: .04em; color: var(--text-mut); border-bottom: 1px dashed var(--border-2); padding-bottom: 6px; }
+.pv-label { font: 11px/1.4 ui-monospace, Menlo, monospace; color: var(--text-mut); }
+.pv-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.pv-cols { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); align-items: start; }
+.pv-icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
+.pv-icon { display: grid; justify-items: center; gap: 6px; padding: 12px 4px; border: 1px solid var(--border); border-radius: 8px; font: 10px/1.2 ui-monospace, Menlo, monospace; color: var(--text-dim); }
+.pv-icon > .ui-icon { width: 26px; height: 26px; color: var(--accent); }
+
+.pv-frames { display: flex; gap: 18px; padding: 16px; overflow-x: auto; min-height: 100vh; background: #e2e8f0; }
+.pv-frame { flex: 0 0 auto; display: grid; gap: 6px; font: 12px ui-monospace, Menlo, monospace; color: #334155; }
+.pv-frame iframe { height: calc(100vh - 110px); border: 1px solid #94a3b8; border-radius: 12px; background: #fff; }
+
+.pv-toolbar b a { color: #fff; padding: 0; }
+.pv-home { display: grid; gap: 16px; max-width: 360px; margin: 64px auto; padding-inline: var(--gutter); }

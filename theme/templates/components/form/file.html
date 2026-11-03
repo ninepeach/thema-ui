@@ -1,0 +1,13 @@
+{{/* components/form/file — dot: ui.File. Capture opens the phone camera. */}}
+{{ define "components/form/file" }}
+<div class="ui-field ui-file{{ if .Error.Set }} is-invalid{{ end }}">
+    <label class="ui-field__label" for="{{ .ID }}">{{ template "text" .Label }}{{ if .Required }}<span class="ui-field__required" aria-hidden="true">*</span>{{ end }}</label>
+    <label class="ui-file__drop" for="{{ .ID }}">
+        {{ template "icon" "upload" }}
+        <span class="ui-file__drop-text">{{ t "ui.choose_file" }}</span>
+        <span class="ui-file__name" data-file-name></span>
+    </label>
+    <input class="ui-file__input ui-visually-hidden" id="{{ .ID }}" name="{{ .Name }}" type="file"{{ with .Accept }} accept="{{ . }}"{{ end }}{{ with .Capture }} capture="{{ . }}"{{ end }}{{ if .Multiple }} multiple{{ end }}{{ if .Required }} required{{ end }}{{ if .Error.Set }} aria-invalid="true"{{ end }}{{ if or .Hint.Set .Error.Set }} aria-describedby="{{ .ID }}-note"{{ end }}>
+    {{ template "components/form/note" . }}
+</div>
+{{ end }}

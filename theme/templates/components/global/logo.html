@@ -1,0 +1,7 @@
+{{/* components/global/logo — root dot (.HomeURL, .Brand) */}}
+{{ define "components/global/logo" }}
+<a class="ui-logo" href="{{ .HomeURL }}" aria-label="{{ .Brand.Name }}">
+    {{ with .Brand.Logo }}<img class="ui-logo__mark" src="{{ asset . }}" alt="">{{ end }}
+    <span class="ui-logo__name">{{ .Brand.Name }}</span>
+</a>
+{{ end }}

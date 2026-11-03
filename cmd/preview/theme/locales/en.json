@@ -1,0 +1,204 @@
+{
+  "d": {
+    "title": {
+      "website": "Demo Lodge — a mountain inn",
+      "app": "Demo Lodge · Check-in",
+      "kit": "thema-ui · Components"
+    },
+    "nav": {
+      "rooms": "Rooms",
+      "dining": "Dining",
+      "access": "Access",
+      "faq": "FAQ",
+      "book": "Book now"
+    },
+    "hero": {
+      "eyebrow": "Northern Alps, Japan",
+      "title": "A quiet base in the mountains",
+      "lead": "Simple rooms, a warm breakfast and the Alps on your doorstep.",
+      "primary": "Check availability",
+      "secondary": "View rooms"
+    },
+    "intro": {
+      "eyebrow": "Why stay",
+      "title": "Everything you need, nothing you don't"
+    },
+    "f": {
+      "wifi": "Free Wi-Fi",
+      "wifi_body": "Fast connection in every room.",
+      "parking": "Free parking",
+      "parking_body": "Room for cars and ski racks.",
+      "breakfast": "Breakfast",
+      "breakfast_body": "Local produce, served every morning.",
+      "access": "Easy access",
+      "access_body": "Ten minutes from the station."
+    },
+    "rooms": {
+      "eyebrow": "Stay",
+      "title": "Rooms",
+      "lead": "Three room types for couples, families and groups."
+    },
+    "room": {
+      "twin": "Twin room",
+      "twin_body": "Two beds and a mountain view.",
+      "family": "Family room",
+      "family_body": "Space for up to four guests.",
+      "tatami": "Japanese-style room",
+      "tatami_body": "Tatami and futon for up to six."
+    },
+    "badge": {
+      "popular": "Popular"
+    },
+    "about": {
+      "title": "Your stay",
+      "caption": "Morning view from the second floor."
+    },
+    "rules": {
+      "title": "House rules",
+      "checkin": "Check-in",
+      "checkout": "Check-out",
+      "self": "Self check-in",
+      "breakfast": "Breakfast",
+      "after": "After {{value}}",
+      "before": "By {{value}}"
+    },
+    "quiet": {
+      "title": "Quiet hours",
+      "n1": "Please keep voices, TV and music low.",
+      "n2": "Walk quietly in hallways and on stairs.",
+      "n3": "No hair dryers during quiet hours."
+    },
+    "faq": {
+      "title": "Questions",
+      "q1": "Can I store luggage before check-in?",
+      "a1": "Yes — leave it in the entrance hall from 10:00.",
+      "q2": "Is there a pickup from the station?",
+      "a2": "We offer a free pickup on request, 16:00–19:00.",
+      "q3": "Do you accept cards?",
+      "a3": "Visa, Mastercard, JCB and Alipay."
+    },
+    "cta": {
+      "title": "Ready to plan your trip?",
+      "body": "Rooms fill quickly in ski season — book early.",
+      "contact": "Contact us"
+    },
+    "footer": {
+      "about": "A small inn at the foot of the Northern Alps.",
+      "stay": "Stay",
+      "help": "Help",
+      "contact": "Contact",
+      "privacy": "Privacy"
+    },
+    "app": {
+      "tagline": "Guest check-in & check-out",
+      "checkin": "Check-in",
+      "checkin_desc": "Register · get your room code",
+      "checkout": "Check-out",
+      "checkout_desc": "Self check-out",
+      "notice_title": "Door code from 16:00",
+      "notice_body": "Your room code appears here once check-in opens."
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "ssid": "Network / SSID",
+      "password": "Password",
+      "none": "No password"
+    },
+    "kit": {
+      "title": "Components",
+      "lead": "Every shared component and its states on one page."
+    },
+    "btn": {
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "ghost": "Ghost",
+      "danger": "Delete",
+      "icon": "Download",
+      "disabled": "Disabled",
+      "block": "Full-width button",
+      "loading": "Saving"
+    },
+    "form": {
+      "name": "Full name",
+      "name_hint": "As shown on your passport",
+      "email": "Email",
+      "email_error": "Enter a valid email address",
+      "phone": "Phone",
+      "country": "Nationality",
+      "c_jp": "Japan",
+      "c_hk": "Hong Kong",
+      "c_tw": "Taiwan",
+      "c_other": "Other",
+      "arrival": "Arrival date",
+      "booking": "Booking number",
+      "note": "Message",
+      "purpose": "Purpose of stay",
+      "p_leisure": "Leisure",
+      "p_business": "Business",
+      "extras": "Extras",
+      "e_breakfast": "Breakfast",
+      "e_parking": "Parking",
+      "e_shuttle": "Shuttle (sold out)",
+      "agree": "I agree to the house rules",
+      "agree_error": "Please accept to continue",
+      "passport": "Passport photo",
+      "passport_hint": "Photo page only, JPG or PNG",
+      "submit": "Continue"
+    },
+    "n": {
+      "info_t": "Check-in opens at 16:00",
+      "info_b": "You can register now; the door code appears at 16:00.",
+      "success_t": "Registration complete",
+      "warning_t": "Breakfast time not confirmed",
+      "danger_t": "Booking not found",
+      "danger_b": "Check the booking number and last name, then try again.",
+      "retry": "Try again"
+    },
+    "b": {
+      "neutral": "Draft",
+      "info": "New",
+      "success": "Paid",
+      "warning": "Pending",
+      "danger": "Cancelled"
+    },
+    "s": {
+      "find": "Find booking",
+      "register": "Register",
+      "done": "Room code"
+    },
+    "t": {
+      "overview": "Overview",
+      "location": "Location"
+    },
+    "back": "Back",
+    "code": {
+      "label": "Door code",
+      "note": "Valid until 10:00 on your departure day",
+      "booking": "Booking number"
+    },
+    "empty": {
+      "title": "No bookings yet",
+      "body": "Bookings you make will appear here.",
+      "action": "Find a booking"
+    },
+    "min": {
+      "title": "Minimal list"
+    },
+    "long": {
+      "title": "Parking",
+      "lot": "Lot",
+      "gate": "Gate code",
+      "a1": "Breakfast reservation",
+      "a1d": "Choose a time and tell us about allergies before 20:00 the day before",
+      "a2": "Luggage",
+      "a2d": "Store bags before check-in or after check-out"
+    },
+    "dlg": {
+      "open": "Check out",
+      "title": "Check out now?",
+      "body": "Your door code stops working once you confirm.",
+      "confirm": "Confirm check-out",
+      "cancel": "Cancel"
+    }
+  }
+}

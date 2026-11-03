@@ -1,0 +1,2 @@
+{{/* components/feedback/badge — dot: ui.Badge. Tone: neutral | info | success | warning | danger */}}
+{{ define "components/feedback/badge" }}<span class="ui-badge ui-badge--{{ or .Tone "neutral" }}">{{ template "text" .Label }}</span>{{ end }}

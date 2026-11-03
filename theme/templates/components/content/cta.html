@@ -1,0 +1,10 @@
+{{/* components/content/cta — dot: ui.CTA */}}
+{{ define "components/content/cta" }}
+<div class="ui-cta">
+    <div class="ui-cta__copy">
+        <h2 class="ui-cta__title">{{ template "text" .Title }}</h2>
+        {{ if .Body.Set }}<p class="ui-cta__text">{{ template "text" .Body }}</p>{{ end }}
+    </div>
+    {{ if .Actions }}<div class="ui-cta__actions">{{ range .Actions }}{{ template "components/form/button" . }}{{ end }}</div>{{ end }}
+</div>
+{{ end }}

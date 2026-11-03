@@ -1,0 +1,25 @@
+{{/* components/layout/site-header — root dot; data in .Header (ui.Header).
+     Desktop: inline nav. Mobile (<900px): <details> menu, no JS needed. */}}
+{{ define "components/layout/site-header" }}{{ with .Header }}
+<header class="ui-header{{ if .Overlay }} ui-header--overlay{{ end }}">
+    <div class="ui-wrap ui-header__inner">
+        {{ template "components/global/logo" $ }}
+        {{ if .Nav }}<nav class="ui-header__nav" aria-label="{{ t "ui.menu" }}">
+            <ul class="ui-header__nav-list">{{ range .Nav }}<li>{{ template "components/navigation/link" . }}</li>{{ end }}</ul>
+        </nav>{{ end }}
+        <div class="ui-header__tools">
+            {{ template "components/navigation/switch-lang" $ }}
+            {{ range .Actions }}<span class="ui-header__action">{{ template "components/form/button" . }}</span>{{ end }}
+            {{ if or .Nav .Actions }}
+            <details class="ui-menu" data-menu>
+                <summary class="ui-icon-button ui-menu__toggle" aria-label="{{ t "ui.menu" }}">{{ template "icon" "menu" }}</summary>
+                <div class="ui-menu__panel">
+                    <ul class="ui-menu__list">{{ range .Nav }}<li>{{ template "components/navigation/link" . }}</li>{{ end }}</ul>
+                    {{ range .Actions }}{{ template "components/form/button" . }}{{ end }}
+                </div>
+            </details>
+            {{ end }}
+        </div>
+    </div>
+</header>
+{{ end }}{{ end }}

@@ -1,0 +1,12 @@
+{{/* layouts/head — loads .CSS in order (see bundle.json / themaui.Bundle.Assets);
+     without .CSS it falls back to the release build dist/thema-ui.min.css. */}}
+{{ define "layouts/head" }}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>{{ template "text" .Title }}</title>
+    {{ range .CSS }}<link rel="stylesheet" href="{{ asset . }}">
+    {{ else }}<link rel="stylesheet" href="{{ asset "dist/thema-ui.min.css" }}">
+    {{ end }}
+</head>
+{{ end }}

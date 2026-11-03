@@ -1,0 +1,204 @@
+{
+  "d": {
+    "title": {
+      "website": "Demo Lodge — 山间小旅馆",
+      "app": "Demo Lodge · 入住",
+      "kit": "thema-ui · 组件"
+    },
+    "nav": {
+      "rooms": "客房",
+      "dining": "餐饮",
+      "access": "交通",
+      "faq": "常见问题",
+      "book": "立即预订"
+    },
+    "hero": {
+      "eyebrow": "日本 · 北阿尔卑斯",
+      "title": "山间的安静落脚处",
+      "lead": "简洁的客房、温暖的早餐，推门即是阿尔卑斯。",
+      "primary": "查看空房",
+      "secondary": "浏览客房"
+    },
+    "intro": {
+      "eyebrow": "为什么选择我们",
+      "title": "该有的都有，多余的没有"
+    },
+    "f": {
+      "wifi": "免费 Wi-Fi",
+      "wifi_body": "每间客房都有高速网络。",
+      "parking": "免费停车",
+      "parking_body": "可停放汽车和滑雪架。",
+      "breakfast": "早餐",
+      "breakfast_body": "每天早上供应本地食材。",
+      "access": "交通便利",
+      "access_body": "距车站10分钟。"
+    },
+    "rooms": {
+      "eyebrow": "住宿",
+      "title": "客房",
+      "lead": "适合情侣、家庭和团体的三种房型。"
+    },
+    "room": {
+      "twin": "双床房",
+      "twin_body": "两张床，山景。",
+      "family": "家庭房",
+      "family_body": "最多可住4人。",
+      "tatami": "和式房间",
+      "tatami_body": "榻榻米加被褥，最多6人。"
+    },
+    "badge": {
+      "popular": "热门"
+    },
+    "about": {
+      "title": "入住须知",
+      "caption": "二楼的清晨景色。"
+    },
+    "rules": {
+      "title": "入住须知",
+      "checkin": "入住",
+      "checkout": "退房",
+      "self": "自助入住",
+      "breakfast": "早餐",
+      "after": "{{value}} 后",
+      "before": "{{value}} 前"
+    },
+    "quiet": {
+      "title": "安静时间",
+      "n1": "请降低说话、电视及音乐音量。",
+      "n2": "走廊及楼梯请轻声行走。",
+      "n3": "安静时间内请勿使用吹风机。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "入住前可以寄存行李吗？",
+      "a1": "可以，10:00 起可放在门厅。",
+      "q2": "有车站接送吗？",
+      "a2": "16:00–19:00 可按需免费接送。",
+      "q3": "可以刷卡吗？",
+      "a3": "支持 Visa、Mastercard、JCB 和支付宝。"
+    },
+    "cta": {
+      "title": "准备好出发了吗？",
+      "body": "滑雪季客房紧张，建议尽早预订。",
+      "contact": "联系我们"
+    },
+    "footer": {
+      "about": "北阿尔卑斯山脚下的小旅馆。",
+      "stay": "住宿",
+      "help": "帮助",
+      "contact": "联系",
+      "privacy": "隐私政策"
+    },
+    "app": {
+      "tagline": "自助入住与退房",
+      "checkin": "Check-in",
+      "checkin_desc": "办理入住 · 领取房间密码",
+      "checkout": "Check-out",
+      "checkout_desc": "自助退房",
+      "notice_title": "16:00 起可领取房间密码",
+      "notice_body": "入住开始后，密码会显示在这里。"
+    },
+    "wifi": {
+      "title": "Free Wi-Fi",
+      "ssid": "Network / SSID",
+      "password": "Password",
+      "none": "No password"
+    },
+    "kit": {
+      "title": "组件",
+      "lead": "所有公共组件及其状态，一页看全。"
+    },
+    "btn": {
+      "primary": "主要",
+      "secondary": "次要",
+      "ghost": "幽灵",
+      "danger": "删除",
+      "icon": "下载",
+      "disabled": "禁用",
+      "block": "整行按钮",
+      "loading": "保存中"
+    },
+    "form": {
+      "name": "姓名",
+      "name_hint": "与护照一致",
+      "email": "电子邮箱",
+      "email_error": "请输入有效的邮箱地址",
+      "phone": "电话",
+      "country": "国籍",
+      "c_jp": "日本",
+      "c_hk": "香港",
+      "c_tw": "台湾",
+      "c_other": "其他",
+      "arrival": "到达日期",
+      "booking": "预订号",
+      "note": "留言",
+      "purpose": "入住目的",
+      "p_leisure": "旅游",
+      "p_business": "商务",
+      "extras": "附加服务",
+      "e_breakfast": "早餐",
+      "e_parking": "停车",
+      "e_shuttle": "接送（已满）",
+      "agree": "我同意入住须知",
+      "agree_error": "请勾选同意后继续",
+      "passport": "护照照片",
+      "passport_hint": "仅资料页，JPG 或 PNG",
+      "submit": "继续"
+    },
+    "n": {
+      "info_t": "16:00 开始办理入住",
+      "info_b": "现在即可登记，密码将于 16:00 显示。",
+      "success_t": "登记完成",
+      "warning_t": "早餐时间尚未确认",
+      "danger_t": "找不到预订",
+      "danger_b": "请核对预订号和姓氏后重试。",
+      "retry": "重试"
+    },
+    "b": {
+      "neutral": "草稿",
+      "info": "新",
+      "success": "已付款",
+      "warning": "待处理",
+      "danger": "已取消"
+    },
+    "s": {
+      "find": "查找预订",
+      "register": "登记",
+      "done": "房间密码"
+    },
+    "t": {
+      "overview": "概览",
+      "location": "位置"
+    },
+    "back": "返回",
+    "code": {
+      "label": "门锁密码",
+      "note": "有效期至退房日 10:00",
+      "booking": "预订号"
+    },
+    "empty": {
+      "title": "暂无预订",
+      "body": "你的预订会显示在这里。",
+      "action": "查找预订"
+    },
+    "min": {
+      "title": "最简列表"
+    },
+    "long": {
+      "title": "停车",
+      "lot": "位置",
+      "gate": "闸门密码",
+      "a1": "早餐预约",
+      "a1d": "请在前一天 20:00 前选择时间并告知过敏信息",
+      "a2": "行李",
+      "a2d": "入住前或退房后寄存行李"
+    },
+    "dlg": {
+      "open": "退房",
+      "title": "现在退房吗？",
+      "body": "确认后，房间密码将失效。",
+      "confirm": "确认退房",
+      "cancel": "取消"
+    }
+  }
+}

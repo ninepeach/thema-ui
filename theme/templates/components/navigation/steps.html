@@ -1,0 +1,9 @@
+{{/* components/navigation/steps — dot: ui.Steps. Numbers come from a CSS counter. */}}
+{{ define "components/navigation/steps" }}
+<ol class="ui-steps">
+    {{ range .Items }}<li class="ui-step ui-step--{{ or .State "todo" }}"{{ if eq .State "current" }} aria-current="step"{{ end }}>
+        <span class="ui-step__dot">{{ if eq .State "done" }}{{ template "icon" "check" }}{{ end }}</span>
+        <span class="ui-step__label">{{ template "text" .Label }}</span>
+    </li>{{ end }}
+</ol>
+{{ end }}

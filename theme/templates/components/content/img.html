@@ -1,0 +1,2 @@
+{{/* components/content/img — dot: ui.Image */}}
+{{ define "components/content/img" }}<img src="{{ if .Remote }}{{ .Src }}{{ else }}{{ asset .Src }}{{ end }}" alt="{{ template "text" .Alt }}"{{ if .Width }} width="{{ .Width }}"{{ end }}{{ if .Height }} height="{{ .Height }}"{{ end }} loading="lazy" decoding="async">{{ end }}

@@ -1,0 +1,4 @@
+{{/* components/navigation/tabs — dot: ui.Tabs (links; Current marks the active tab) */}}
+{{ define "components/navigation/tabs" }}
+<nav class="ui-tabs"><ul class="ui-tabs__list">{{ range .Items }}<li>{{ template "components/navigation/link" . }}</li>{{ end }}</ul></nav>
+{{ end }}
